@@ -208,7 +208,7 @@ class _MyHomePageState extends State<MyHomePage> {
       showErrorDialog(context, "最多為10", "錯誤");
       return;
     }
-    if (index == -1) {
+    if (index == -1 || _add == index) {
       setState(() {
         item[_add].Count++;
       });
