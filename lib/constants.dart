@@ -31,3 +31,15 @@ const whiteTextStyle = TextStyle(
   color: Colors.white,
 );
 
+const BlueTextStyle = TextStyle(
+  fontFamily: 'JhengHei',
+  fontSize: 18.0,
+  color: Color.fromRGBO(54, 187, 217, 1),
+);
+
+const serviceTextStyle = TextStyle(
+  fontFamily: 'JhengHei',
+  fontSize: 18.0,
+  color: Colors.black,
+);
+

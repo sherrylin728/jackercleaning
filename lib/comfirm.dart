@@ -29,7 +29,15 @@ class _ComfirmState extends State<Comfirm> {
     return Scaffold(
         appBar: AppBar(
           title: Text("確認價格",style: TextStyle(color: Colors.white)),
-
+          leading:
+          Builder(
+            builder: (BuildContext context) {
+              return IconButton(
+                icon: const Icon(Icons.arrow_back_ios,color: Colors.white),
+                onPressed: () { Navigator.of(context).pop();},
+              );
+            },
+          ),
           centerTitle: true,
         ),
         body: Container(
@@ -46,7 +54,18 @@ class _ComfirmState extends State<Comfirm> {
         ),
     );
   }
-
+  Widget _leader() =>Container(
+    height: 25.0,
+    width: 25.0,
+    child: IconButton(
+        color: colorCustom,
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        padding: new EdgeInsets.all(0.0),
+        onPressed: () {
+        },
+        icon: const Icon(Icons.filter_list)),
+  );
   Widget _order() =>Container(
     padding: EdgeInsets.all(15),
     alignment:Alignment.centerLeft,

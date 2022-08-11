@@ -31,9 +31,11 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
+MaterialColor colorCustom = MaterialColor(0xff36bbd9, color);
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  int index = -1;
   List<Item> item = [];
   @override
   void initState() {
@@ -50,6 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size.height*0.669;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title,style: TextStyle(color: Colors.white)),
@@ -99,8 +102,13 @@ class _MyHomePageState extends State<MyHomePage> {
       child: ListView.separated(
           itemCount: item.length,
           itemBuilder: (_, index) => ListTile(
-            title: Text(item[index].ID),
-            subtitle: Text("\$ ${item[index].Cost}"),
+            title: Text(item[index].ID,
+            style: serviceTextStyle,
+            ),
+            subtitle: Text(
+                "\$ ${item[index].Cost}",
+              style: BlueTextStyle,
+            ),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -113,11 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       highlightColor: Colors.transparent,
                       padding: new EdgeInsets.all(0.0),
                       onPressed: () {
-                          if(item[index].Count>0){
-                            setState(() {
-                              item[index].Count--;
-                            });
-                          }
+                        delete(index);
                       },
                       icon: const Icon(Icons.do_not_disturb_on)),
                 ),
@@ -187,42 +191,36 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void delect(int index){
-    if(item[index].Count>0){
+  void delete(int _del){
+    if(item[_del].Count>0){
       setState(() {
-        item[index].Count--;
+        item[_del].Count--;
+        if(item[_del].Count==0){
+          index= -1;
+        }
       });
+
     }
   }
 
-  void add(int index){
-    if(item[index].Count == 10){
-      showErrorDialog(context,"最多為10","錯誤");
+  void add(int _add) {
+    if (item[_add].Count == 10) {
+      showErrorDialog(context, "最多為10", "錯誤");
       return;
     }
-    for (var ls in item)  {
-      if(ls.Count == 0){
-        if(ls.ID == item[index].ID){
-          setState(() {
-            ls.Count++;
-          });
-          break;
-        }
+    if (index == -1) {
+      setState(() {
+        item[_add].Count++;
+      });
+      index = _add;
+    }
+    else {
+      if (_add != index) {
+        showErrorDialog(context, "只能選擇單一個項目", "錯誤");
       }
-      else if(ls.Count > 0){
-        if(ls.ID != item[index].ID){
-          showErrorDialog(context,"只能選擇單一個項目","錯誤");
-          break;
-        }
-        else{
-          setState(() {
-            ls.Count++;
-          });
-          break;
-        }
-      }
-    };
+    }
   }
+
 }
 showErrorDialog(BuildContext context, String s, String title) {
   showDialog(
@@ -259,4 +257,4 @@ Map<int, Color> color =
   800:Color.fromRGBO(54, 187, 217, .9),
   900:Color.fromRGBO(54, 187, 217, 1),
 };
-MaterialColor colorCustom = MaterialColor(0xff36bbd9, color);
+
