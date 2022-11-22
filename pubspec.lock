@@ -7,7 +7,11 @@ packages:
       name: async
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.5.0"
+=======
+    version: "2.9.0"
+>>>>>>> 86ed0ef (first)
   boolean_selector:
     dependency: transitive
     description:
@@ -21,6 +25,7 @@ packages:
       name: characters
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.1.0"
   charcode:
     dependency: transitive
@@ -29,20 +34,31 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
+=======
+    version: "1.2.1"
+>>>>>>> 86ed0ef (first)
   clock:
     dependency: transitive
     description:
       name: clock
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.1.0"
+=======
+    version: "1.1.1"
+>>>>>>> 86ed0ef (first)
   collection:
     dependency: transitive
     description:
       name: collection
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.15.0"
+=======
+    version: "1.16.0"
+>>>>>>> 86ed0ef (first)
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -56,7 +72,11 @@ packages:
       name: fake_async
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.2.0"
+=======
+    version: "1.3.1"
+>>>>>>> 86ed0ef (first)
   flutter:
     dependency: "direct main"
     description: flutter
@@ -73,21 +93,40 @@ packages:
       name: matcher
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.12.10"
+=======
+    version: "0.12.12"
+  material_color_utilities:
+    dependency: transitive
+    description:
+      name: material_color_utilities
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.5"
+>>>>>>> 86ed0ef (first)
   meta:
     dependency: transitive
     description:
       name: meta
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.3.0"
+=======
+    version: "1.8.0"
+>>>>>>> 86ed0ef (first)
   path:
     dependency: transitive
     description:
       name: path
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.8.0"
+=======
+    version: "1.8.2"
+>>>>>>> 86ed0ef (first)
   sky_engine:
     dependency: transitive
     description: flutter
@@ -99,7 +138,11 @@ packages:
       name: source_span
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.8.0"
+=======
+    version: "1.9.0"
+>>>>>>> 86ed0ef (first)
   stack_trace:
     dependency: transitive
     description:
@@ -120,20 +163,29 @@ packages:
       name: string_scanner
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.1.0"
+=======
+    version: "1.1.1"
+>>>>>>> 86ed0ef (first)
   term_glyph:
     dependency: transitive
     description:
       name: term_glyph
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.2.0"
+=======
+    version: "1.2.1"
+>>>>>>> 86ed0ef (first)
   test_api:
     dependency: transitive
     description:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.2.19"
   typed_data:
     dependency: transitive
@@ -142,12 +194,21 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.0"
+=======
+    version: "0.4.12"
+>>>>>>> 86ed0ef (first)
   vector_math:
     dependency: transitive
     description:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.1.0"
 sdks:
   dart: ">=2.12.0 <3.0.0"
+=======
+    version: "2.1.2"
+sdks:
+  dart: ">=2.17.0-0 <3.0.0"
+>>>>>>> 86ed0ef (first)
